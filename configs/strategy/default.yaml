@@ -1,0 +1,7 @@
+simulate_only: true
+edge_min_bps: 100
+size_usd_max: 0
+max_position_size: 100
+refresh_rate: 10
+exchanges: [kalshi, polymarket]
+log_level: INFO

@@ -1,0 +1,17 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-merge-conflict
+
+  - repo: local
+    hooks:
+      - id: no-live-trading
+        name: "Block LIVE trading flags"
+        entry: scripts/no_live_trading.py
+        language: system
+        files: ".*"
+        exclude: "^scripts/no_live_trading\\.py$"
+        pass_filenames: true
